@@ -3,13 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SingleBoerseNRW"
+        xmlns:viewModel="clr-namespace:SingleBoerseNRW.MVVM.ViewModel"
+        xmlns:local="clr-namespace:SingleBoerseNRW" xmlns:viewModel1="clr-namespace:SingleBoerseNRW.MVVM.View"
         mc:Ignorable="d"
         Height="600" Width="920"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
+
+    <Window.DataContext>
+        <viewModel1:MainViewModel>
+            
+        </viewModel1:MainViewModel>
+    </Window.DataContext>
 
 
     <Border Background="#272537"
@@ -67,7 +74,8 @@
 
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
-                            Margin="10"/>
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
 
         </Grid>
 

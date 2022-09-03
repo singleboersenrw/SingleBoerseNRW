@@ -1,26 +1,31 @@
 ﻿using SingleBoerseNRW.Core;
+using SingleBoerseNRW.MVVM.ViewModel;
 using System;
 
 
 namespace SingleBoerseNRW.MVVM.View
 {
-    private object _currentView;
-
-    public object CurrentView
-    {
-        get { return _curentView; }
-        set 
-        { 
-            _currentView = value;
-            OnPropertyChanged();
-        }
-    }
-
+   
     class MainViewModel : ObservableObject
+        
     {
+        public HomeViewModel HomeVM { get; set; }
+        private object _currentView;
+
+        public object CurrentView
+        {
+            get { return _currentView; }
+            set
+            {
+                _currentView = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MainViewModel()
         {
-
+            HomeVM = new HomeViewModel();
+            CurrentView = HomeVM;
 
         }
     }

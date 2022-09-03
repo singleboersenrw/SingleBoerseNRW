@@ -12,36 +12,44 @@
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"/>
-
-        <StackPanel Orientation="Horizontal">
-            <Border Width="400"
+        <Button>
+            
+            <StackPanel Orientation="Horizontal">
+                <Border Width="400"
                 Height="200"
                 HorizontalAlignment="Left">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                    <GradientStop Color="#5bc3ff" Offset="0.0"/>
-                    <GradientStop Color="#3aa0ff" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                            <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                            <GradientStop Color="#3aa0ff" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
 
-            <Border.Clip>
-                <RectangleGeometry RadiusX="10"
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
                                    RadiusY="10"
                                    Rect="0,0,400,200"/>
-            </Border.Clip>
 
-            <Grid>
-                <StackPanel>
-                    <TextBlock Text="Auf ind die&#xA;Welt der Singles"
+       
+        </Border.Clip>
+        
+
+        <Grid>
+
+                        <StackPanel>
+
+                            <TextBlock Text="Auf ind die&#xA;Welt der Singles"
                               Foreground="White"
                                FontSize="28"
                               Margin="20,10,10,0" />
-                    <TextBlock Text="Hier gehts zur Haupseite!"
+                            <TextBlock Text="Hier gehts zur Haupseite!"
                               Foreground="White"
                                FontSize="18"
                               Margin="20,10,10,0" />
-                </StackPanel>
-                <Image 
+        
+                    </StackPanel>
+        
+        <Image 
                     Width="211"
                     Height="193"
                     Source="/images/main2.png"
@@ -50,9 +58,11 @@
                     Margin="0,0,-17,-31"
                     RenderTransformOrigin="0.318,0.455"/>
 
-            </Grid>
-
+    </Grid>
+        
         </Border>
+
+        
         <Border Width="200" 
                 Height="200"
                 CornerRadius="10"
@@ -66,6 +76,7 @@
             </Border.Background>
         </Border>
     </StackPanel>
+        </Button>
         <StackPanel>
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -99,3 +110,4 @@
         </StackPanel>
     </StackPanel>
 </UserControl>
+
