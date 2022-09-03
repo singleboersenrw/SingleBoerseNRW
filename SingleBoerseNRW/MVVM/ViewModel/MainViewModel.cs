@@ -21,6 +21,7 @@ namespace SingleBoerseNRW.MVVM.View
         public MainViewModel()
         {
 
+
         }
     }
 }
