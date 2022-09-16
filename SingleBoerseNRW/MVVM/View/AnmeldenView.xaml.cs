@@ -14,18 +14,13 @@ using System.Windows.Shapes;
 namespace SingleBoerseNRW.MVVM.View
 {
     /// <summary>
-    /// Interaktionslogik für HomeView.xaml
+    /// Interaktionslogik für AnmeldenView.xaml
     /// </summary>
-    public partial class HomeView : UserControl
+    public partial class AnmeldenView : UserControl
     {
-        public HomeView()
+        public AnmeldenView()
         {
             InitializeComponent();
-        }
-
-        private void Click_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("Test");
         }
     }
 }

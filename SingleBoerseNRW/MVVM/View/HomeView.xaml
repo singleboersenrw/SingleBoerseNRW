@@ -4,92 +4,88 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SingleBoerseNRW.MVVM.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" d:DesignWidth="800" Height="492">
     <StackPanel>
+
+
         <TextBlock Text="Willkommen!"
                    Foreground="White"
                    FontSize="28"
-                   HorizontalAlignment="Left"
-                   Margin="0,0,0,20"/>
-        <Button>
-            
-            <StackPanel Orientation="Horizontal">
-                <Border Width="400"
-                Height="200"
-                HorizontalAlignment="Left">
-                    <Border.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                            <GradientStop Color="#5bc3ff" Offset="0.0"/>
-                            <GradientStop Color="#3aa0ff" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Border.Background>
+                   />
 
-                    <Border.Clip>
-                        <RectangleGeometry RadiusX="10"
+
+        <StackPanel Orientation="Horizontal" Width="678" Height="201">
+            <Border Width="417" Height="215">
+
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aa0ff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
                                    RadiusY="10"
                                    Rect="0,0,400,200"/>
 
-       
-        </Border.Clip>
-        
 
-        <Grid>
+                </Border.Clip>
 
-                        <StackPanel>
 
-                            <TextBlock Text="Auf ind die&#xA;Welt der Singles"
+                <Grid>
+                    <Image 
+                    Width="217"
+                    Height="193"
+                    Source="/images/main2.png"
+                    RenderTransformOrigin="0.318,0.455" StretchDirection="DownOnly" Margin="212,48,-12,-26"/>
+                    <StackPanel Margin="0,0,10,0">
+
+                        <TextBlock Text="Auf in die&#xA;Welt der Singles"
                               Foreground="White"
                                FontSize="28"
-                              Margin="20,10,10,0" />
-                            <TextBlock Text="Hier gehts zur Haupseite!"
+                              Margin="20,10,10,0" Height="86" 
+                                      />
+
+                        <TextBlock Text="Hier gehts zur Haupseite!"
                               Foreground="White"
                                FontSize="18"
                               Margin="20,10,10,0" />
-        
                     </StackPanel>
-        
-        <Image 
-                    Width="211"
-                    Height="193"
-                    Source="/images/main2.png"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="0,0,-17,-31"
-                    RenderTransformOrigin="0.318,0.455"/>
 
-    </Grid>
-        
-        </Border>
 
-        
-        <Border Width="200" 
-                Height="200"
+
+                </Grid>
+
+            </Border>
+
+
+            <Border x:Name="Click" Width="194" 
+                Height="202"
                 CornerRadius="10"
-                Margin="45,0,0,0">
+                Margin="45,0,0,0" MouseLeftButtonDown="Click_MouseLeftButtonDown">
 
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                    <GradientStop Color="#ffc554" Offset="0.0"/>
-                    <GradientStop Color="#ffb73a" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
-        </Border>
-    </StackPanel>
-        </Button>
-        <StackPanel>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#ffc554" Offset="0.0"/>
+                        <GradientStop Color="#ffb73a" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Height="232">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="Margin" Value="15,0,0,0">
-                    </Setter>
+                    <Setter Property="Margin" Value="15,0,0,0"/>
                 </Style>
             </StackPanel.Resources>
             <TextBlock Text="Programmoptionen"
                    Foreground="White"
                    FontSize="28"
-                   HorizontalAlignment="Left"
-                   Margin="0,0,0,20"/>
-            <StackPanel Orientation="Horizontal">
+                   Width="248" Height="42"/>
+            <StackPanel Orientation="Horizontal" Width="696" Height="186">
                 <Border Width="150"
                         Height="150"
                         Background="#844eff"

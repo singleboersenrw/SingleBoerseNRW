@@ -7,9 +7,14 @@ namespace SingleBoerseNRW.MVVM.View
 {
    
     class MainViewModel : ObservableObject
-        
     {
+
+        public RelayCommand HomeViewCommand { get; set; }
+        public RelayCommand AnmeldenViewCommand { get; set; }
+
+
         public HomeViewModel HomeVM { get; set; }
+        public AnmeldenViewModel AnmeldenVM { get; set; }
         private object _currentView;
 
         public object CurrentView
@@ -25,7 +30,21 @@ namespace SingleBoerseNRW.MVVM.View
         public MainViewModel()
         {
             HomeVM = new HomeViewModel();
+            AnmeldenVM = new AnmeldenViewModel();
+
             CurrentView = HomeVM;
+
+            HomeViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = HomeVM;
+            });
+
+
+
+            AnmeldenViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = AnmeldenVM;
+            });
 
         }
     }
