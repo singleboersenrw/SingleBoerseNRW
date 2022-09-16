@@ -39,7 +39,11 @@
                     Width="217"
                     Height="193"
                     Source="/images/main2.png"
-                    RenderTransformOrigin="0.318,0.455" StretchDirection="DownOnly" Margin="212,48,-12,-26"/>
+                    RenderTransformOrigin="0.318,0.455" StretchDirection="DownOnly" Margin="212,43,-12,-21">
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
                     <StackPanel Margin="0,0,10,0">
 
                         <TextBlock Text="Auf in die&#xA;Welt der Singles"
@@ -53,6 +57,15 @@
                                FontSize="18"
                               Margin="20,10,10,0" />
                     </StackPanel>
+                    <Image 
+                        Width="217"
+                        Height="193"
+                        Source="/Images/main2.png"
+                        RenderTransformOrigin="0.318,0.455" StretchDirection="DownOnly" Margin="212,43,-12,-21">
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
 
 
 
@@ -60,19 +73,24 @@
 
             </Border>
 
-
-            <Border x:Name="Click" Width="194" 
+            
+            <Border x:Name="Border_Click" Width="194" 
                 Height="202"
                 CornerRadius="10"
-                Margin="45,0,0,0" MouseLeftButtonDown="Click_MouseLeftButtonDown">
-
-                <Border.Background>
+                Margin="45,0,0,0" MouseLeftButtonDown="Click_MouseLeftButtonDown" IsMouseDirectlyOverChanged="Click_IsMouseDirectlyOverChanged">
+            <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                         <GradientStop Color="#ffc554" Offset="0.0"/>
                         <GradientStop Color="#ffb73a" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
+                <TextBlock Text="Auf zu &#xA;unserer&#xA;Webseite"
+                              Foreground="White"
+                               FontSize="28"
+                              Margin="10,10,11,74" 
+                                      />
             </Border>
+            
         </StackPanel>
 
         <StackPanel Height="232">
@@ -85,11 +103,14 @@
                    Foreground="White"
                    FontSize="28"
                    Width="248" Height="42"/>
+            
             <StackPanel Orientation="Horizontal" Width="696" Height="186">
+
                 <Border Width="150"
                         Height="150"
                         Background="#844eff"
                         CornerRadius="10"/>
+                
                 <Border Width="150"
                         Height="150"
                         Background="#4e99ff"
@@ -102,6 +123,7 @@
                         Height="150"
                         Background="#ecff4e"
                         CornerRadius="10"/>
+                
             </StackPanel>
         </StackPanel>
     </StackPanel>

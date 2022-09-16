@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace SingleBoerseNRW.MVVM.View
 {
@@ -25,7 +26,24 @@ namespace SingleBoerseNRW.MVVM.View
 
         private void Click_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Test");
+
+            Process process = new Process();
+            process.StartInfo.UseShellExecute = true;
+            process.StartInfo.FileName = "http://singleboerse-nrw.de";
+            process.Start();
+
+
+
+
+
+
         }
+
+        private void Click_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            
+        }
+
+
     }
 }

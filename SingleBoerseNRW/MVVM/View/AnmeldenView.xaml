@@ -6,9 +6,10 @@
              xmlns:local="clr-namespace:SingleBoerseNRW.MVVM.View"
              mc:Ignorable="d" d:DesignWidth="800" Height="492">
     <StackPanel>
-
-
-       
+        <Border Width="562"
+            Height="427"
+            Background="#4e99ff"
+            CornerRadius="10"/>
     </StackPanel>
 
 </UserControl>
