@@ -6,10 +6,20 @@
              xmlns:local="clr-namespace:SingleBoerseNRW.MVVM.View"
              mc:Ignorable="d" d:DesignWidth="800" Height="492">
     <StackPanel>
-        <Border Width="562"
-            Height="427"
-            Background="#4e99ff"
-            CornerRadius="10"/>
+        <Grid Width="244">
+            <TextBox Text="Benutzername" TextWrapping="Wrap" Margin="-1,77,2,0" Height="18" VerticalAlignment="Top"/>
+            <TextBox Text="Passwort" TextWrapping="Wrap" Margin="-1,121,0,0" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="243"/>
+        </Grid>
+        <Grid/>
+        <Button Content="Anmelden" Foreground="White"
+                FontSize="14" Background="DarkCyan" RenderTransformOrigin="0.501,1.048" Height="63" Width="288" >
+            <Button.Resources>
+
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </StackPanel>
 
 </UserControl>
