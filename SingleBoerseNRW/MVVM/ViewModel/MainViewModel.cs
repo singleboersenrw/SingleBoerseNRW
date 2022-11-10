@@ -11,10 +11,15 @@ namespace SingleBoerseNRW.MVVM.View
 
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand AnmeldenViewCommand { get; set; }
+        public RelayCommand RegistrierenViewCommand { get; set; }
+
+
 
 
         public HomeViewModel HomeVM { get; set; }
         public AnmeldenViewModel AnmeldenVM { get; set; }
+        public RegistrierenViewModel RegistrierenVM { get; set; }
+
         private object _currentView;
 
         public object CurrentView
@@ -31,6 +36,7 @@ namespace SingleBoerseNRW.MVVM.View
         {
             HomeVM = new HomeViewModel();
             AnmeldenVM = new AnmeldenViewModel();
+            RegistrierenVM = new RegistrierenViewModel();
 
             CurrentView = HomeVM;
 
@@ -45,6 +51,13 @@ namespace SingleBoerseNRW.MVVM.View
             {
                 CurrentView = AnmeldenVM;
             });
+
+            RegistrierenViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = RegistrierenVM;
+            });
+
+
 
         }
     }
